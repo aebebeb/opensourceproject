@@ -34,10 +34,10 @@ urlpatterns = [
     path('login.html', views.login, name='login'),
     path('logout.html', views.logout, name='logout'),
     path('register.html', views.register, name='register'),
-    path('musinsa.html', views.musinsa, name='register'),
+    path('musinsa.html', views.musinsa, name='musinsa'),
     path('index-1.html', views.index1, name='index1'),
-    path('mixxo.html', views.mixxo, name='register'),
-    path('spao.html', views.spao, name='register'),
+    path('mixxo.html', views.mixxo, name='mixxo'),
+    path('spao.html', views.spao, name='spao'),
 ] 
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
