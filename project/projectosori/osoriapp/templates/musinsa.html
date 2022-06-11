@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>MyPortfolio Bootstrap Template - Work Single</title>
+  <title>Musinsa</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
  
@@ -52,15 +52,25 @@
         <div class="container">
           <div class="row align-items-stretch">
             <div class="col-md-8" data-aos="fade-up">
-              <img src="{% static 'img/img_1_big.jpg'%}" alt="Image" class="img-fluid">
+              <!-- {{ musinsa_model.musinsa_image }} -->
+              <img src="https://image.msscdn.net/images/goods_img/20220329/2453556/2453556_1_500.jpg?t=20220331173150" alt="Image" class="img-fluid">
             </div>
             <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
               <div class="sticky-content">
                 <h3 class="h3">Ranking</h3>
-                <p class="mb-4"><span class="text-muted">fashion</span></p>
+                <p class="mb-4">
 
                 <div class="mb-5">
-                
+
+
+
+                  
+                  {% for musinsa_rank in musinsa_ranks %}
+                  <span>{{musinsa_rank.musinsa_rank_key }}</span>
+                  <span><a href="{{ musinsa_rank.musinsa_rank_link }}">{{ musinsa_rank.musinsa_rank_name }}</a></span><br><p></p>
+                  {% endfor %}
+
+<!-- 
                   <tr>
                     {% for musinsa_model in musinsa_models %}
                       <td>{{ musinsa_model.musinsa_key }}</td>
@@ -68,13 +78,7 @@
                       <td>{{ musinsa_model.musinsa_link }}</td>
                       <p></p>
                     {% endfor %}
-                  </tr>
-                  {% for musinsa_rank in musinsa_ranks %}
-                  <td>{{ musinsa_rank.musinsa_rank_key }}</td><p></p>
-                  <td>{{ musinsa_rank.musinsa_rank_name }}</td>
-                  <td>{{ musinsa_rank.musinsa_rank_link }}</td>
-                  <p></p>
-                {% endfor %}
+                  </tr> -->
 
                 </div>
 
@@ -86,7 +90,7 @@
                   <li>럭셔리 브랜드부터 컨템포러리, 영캐주얼, 스포츠 브랜드까지 다양한 브랜드 패션 제공</li>
                 </ul>
 
-                <p><a href="#" class="readmore">Visit Website</a></p>
+                <p><a href="https://www.musinsa.com" class="readmore">Visit Website</a></p>
               </div>
             </div>
           </div>

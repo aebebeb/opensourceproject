@@ -52,15 +52,26 @@
         <div class="container">
           <div class="row align-items-stretch">
             <div class="col-md-8" data-aos="fade-up">
-              <img src="{{ spao_model.spao_link }}" alt="Image" class="img-fluid">
+              <img src="https://www.spao.com/web/product/medium/202204/740f9ca61b732714ecc8ce9a7f0d2344.jpg" alt="Image" class="img-fluid">
             </div>
             <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
               <div class="sticky-content">
                 <h3 class="h3">Ranking</h3>
-                <p class="mb-4"><span class="text-muted">fashion</span></p>
 
                 <div class="mb-5">
                 
+                  {% for spao_rank in spao_ranks %}
+                    <span>{{spao_rank.spao_rank_key }}</span>
+                    <span><a href="{{ spao_rank.spao_rank_link }}">{{ spao_rank.spao_rank_name }}</a></span><br><p></p>
+                    {% endfor %}
+
+                  <!-- {% for spao_rank in spao_ranks %}
+                  <td>{{ spao_rank.spao_rank_key }}</td><p></p>
+                  <td>{{ spao_rank.spao_rank_name }}</td>
+                  <td>{{ spao_rank.spao_rank_link }}</td>
+                  <p></p>
+                {% endfor %}
+
                   <tr>
                     {% for spao_model in spao_models %}
                       <td>{{ spao_model.spao_key }}</td>
@@ -68,25 +79,20 @@
                       <td>{{ spao_model.spao_link }}</td>
                       <p></p>
                     {% endfor %}
-                  </tr>
-                  {% for spao_rank in spao_ranks %}
-                  <td>{{ spao_rank.spao_rank_key }}</td><p></p>
-                  <td>{{ spao_rank.spao_rank_name }}</td>
-                  <td>{{ spao_rank.spao_rank_link }}</td>
-                  <p></p>
-                {% endfor %}
+                  </tr> -->
 
                 </div>
 
                 <h4 class="h4 mb-3">Features</h4>
                 <ul class="list-unstyled list-line mb-5">
-                  <li>국내 최대 온라인 패션 스토어</li>
-                  <li>스타일별 검색, 개인화된 맞춤형 브랜드 추천</li>
-                  <li>패션 피플의 스타일링 모아보기</li>
-                  <li>럭셔리 브랜드부터 컨템포러리, 영캐주얼, 스포츠 브랜드까지 다양한 브랜드 패션 제공</li>
+                  <li>SPA 브랜드</li>
+                  <li>타 의류브랜드에 비해 저렴한 가격</li>
+                  <li>동양인 체형에 맞춰진 의류</li>
+                  <li>베이직한 기본의류와 트랜디한 의류의 혼합</li>
+                  <li>10대 후반에서 20대 초중반을 타겟으로 비교적 색상이 밝고 데포르메된 캐리턱 티셔츠등을 주류로 판맨하고 있음</li>
                 </ul>
 
-                <p><a href="#" class="readmore">Visit Website</a></p>
+                <p><a href="https://www.spao.com/" class="readmore">Visit Website</a></p>
               </div>
             </div>
           </div>

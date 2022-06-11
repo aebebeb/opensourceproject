@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'osoriapp.apps.OsoriappConfig',
-    'outfit',
 ]
 
 MIDDLEWARE = [
@@ -126,6 +125,6 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 
-MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-MEDIA_URL='/media/'
+MEDIA_URL = '/media/'
