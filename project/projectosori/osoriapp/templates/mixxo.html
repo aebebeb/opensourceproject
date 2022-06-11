@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>MyPortfolio Bootstrap Template - Work Single</title>
+  <title>Mixxo</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
  
@@ -43,7 +43,7 @@
         <div class="row mb-4 align-items-center">
           <div class="col-md-6" data-aos="fade-up">
             <h2>MIXXO</h2>
-            <p>국내 최대 온라인 패션 스토어</p>
+            <p>글로벌 SPA 브랜드</p>
           </div>
         </div>
       </div>
@@ -52,41 +52,45 @@
         <div class="container">
           <div class="row align-items-stretch">
             <div class="col-md-8" data-aos="fade-up">
-              <img src="{% static 'img/img_1_big.jpg'%}" alt="Image" class="img-fluid">
+              <img src="https://www.mixxo.com/web/product/medium/202205/38b690abf736949563491552c813ae08.jpg" class="img-fluid">
             </div>
             <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
               <div class="sticky-content">
                 <h3 class="h3">Ranking</h3>
-                <p class="mb-4"><span class="text-muted">fashion</span></p>
 
                 <div class="mb-5">
                 
-                  <tr>
-                    {% for mixxo_model in mixxo_models %}
+
+                  {% for mixxo_rank in mixxo_ranks %}
+                    <span>{{mixxo_rank.mixxo_rank_key }}</span>
+                    <span><a href="{{ mixxo_rank.mixxo_rank_link }}">{{ mixxo_rank.mixxo_rank_name }}</a></span><br><p></p>
+                    {% endfor %}
+
+                    <!-- {% for mixxo_model in mixxo_models %}
                       <td>{{ mixxo_model.mixxo_key }}</td>
                       <td>{{ mixxo_model.mixxo_image }}</td>
                       <td>{{ mixxo_model.mixxo_link }}</td>
                       <p></p>
-                    {% endfor %}
-                  </tr>
-                  {% for mixxo_rank in mixxo_ranks %}
+                    {% endfor %} -->
+
+                  <!-- {% for mixxo_rank in mixxo_ranks %}
                   <td>{{ mixxo_rank.mixxo_rank_key }}</td><p></p>
                   <td>{{ mixxo_rank.mixxo_rank_name }}</td>
                   <td>{{ mixxo_rank.mixxo_rank_link }}</td>
                   <p></p>
-                {% endfor %}
+                {% endfor %} -->
 
                 </div>
 
                 <h4 class="h4 mb-3">Features</h4>
                 <ul class="list-unstyled list-line mb-5">
-                  <li>국내 최대 온라인 패션 스토어</li>
+                  <li>베이직 데일리웨어에 트렌디한 디자인을 "MIX&MATCH" 스타일</li>
                   <li>스타일별 검색, 개인화된 맞춤형 브랜드 추천</li>
-                  <li>패션 피플의 스타일링 모아보기</li>
-                  <li>럭셔리 브랜드부터 컨템포러리, 영캐주얼, 스포츠 브랜드까지 다양한 브랜드 패션 제공</li>
+                  <li>세계적이고 트렌디한 아이템을 주단위로 업데이트</li>
+                  <li>글로벌 감성의 디자인을 동양인 체형에 맞춘 패턴으로 전개한 제품들.</li>
                 </ul>
 
-                <p><a href="#" class="readmore">Visit Website</a></p>
+                <p><a href="https://www.mixxo.com/" class="readmore">Visit Website</a></p>
               </div>
             </div>
           </div>
